@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+:root {
+    --main-bg-color: #031927ff;
+    --secondary-bg-color: #548687ff;
+    --main-text-color: #f8f1ffff;
+    --main-details-color: #ba5c12ff;
+}
+
+.contenedor {
+    width: 100%;
+}
+
+/* CABECERA */
+.cabecera {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 5;
+    transition: background-color .2s ease-in-out;
+    position: fixed;
+    top: 0px;
+}
+
+.cabecera h1 {
+    color: var(--main-text-color);
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+.cabecera h1 span {
+    color: var(--main-text-color);
+    font-weight: 200;
+}
+
+.cabecera ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecera li {
+    height: 100%;
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+.cabecera li a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--main-text-color);
+    padding: 0 10px;
+    background-image: linear-gradient(var(--main-text-color), var(--main-text-color));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    transition: background-size .3s;
+    font-weight: 300;
+}
+
+.cabecera li a:hover {
+    color: var(--main-text-color);
+    background-size: 100% 3px;
+}
+
+.cabecera .activo {
+    color: var(--main-text-color);
+    background-size: 100% 3px;
+}
+
+.boton_cv {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right bottom, #ba5c12, #c7671c, #d57225, #e27d2d, #f08836);
+    cursor: pointer;
+    border: 0;
+    margin-left: 20px;
+    transition: transform .1s;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button;
+    -moz: none;
+    -ms: none;
+}
+
+.boton_cv a {
+    color: var(--main-text-color);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.fijar {
+    background-color: rgba(248, 241, 255, .1);
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(3, 25, 39, 1) 0 0 10px;
+}
+/* FIN CABECERA */
+
+/* SECCIÓN SOBRE MÍ */
+.sobre_mi {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../IMG/fondo1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenido_sobre_mi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: rgba(3, 25, 39, .85);
+}
+
+.info {
+    width: 60%;
+    text-align: center;
+}
+
+.info h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--main-text-color);
+    margin-bottom: 20px;
+}
+
+.info h2 span {
+    font-weight: 200;
+    font-size: 4rem;
+    color: var(--main-text-color);
+}
+
+.info p {
+    color: var(--main-text-color);
+    opacity: .7;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.boton_ver_proyectos {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: background-color .1s;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button;
+    -moz: none;
+    -ms: none;
+}
+
+.boton_ver_proyectos a {
+    width: 100%;
+    height: 100%;
+    color: var(--main-text-color);
+    font-weight: 200;
+    text-decoration: none;
+    border: 2px solid var(--main-details-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color .2s ease-in-out;
+}
+
+.boton_ver_proyectos a:hover {
+    transition: background-color .2s ease-in-out;
+    background-color: var(--main-details-color);
+}
+/* FIN SECCIÓN SOBRE MÍ */
+
+/* SECCIÓN HABILIDADES */
+.habilidades {
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+}
+
+.habilidades h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 50px;
+}
+
+.acordeon {
+    width: 80%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto 50px auto;
+}
+
+.cabecera_panel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+}
+
+.cabecera_panel:hover {
+    cursor: pointer;
+}
+
+.cabecera_panel p {
+    font-size: 1.2rem;
+    color: var(--main-text-color);
+    font-weight: 300;
+}
+
+.cabecera_panel i {
+    font-size: 1.7rem;
+    color: var(--main-text-color);
+}
+
+.panel {
+    will-change: transition, max-height;
+    max-height: 0px;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#panel1, #panel2, #panel3, #panel4 {
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+}
+
+.iconos_habilidades {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:  70px;
+    padding: 50px 30px 30px 30px;
+}
+
+.icono_habilidad {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: var(--main-text-color);
+    border-radius: 5px;
+    box-shadow: var(--main-bg-color) 0px 0px 3px;
+    transition: transform .2s ease-in-out;
+    position: relative;
+}
+
+.icono_habilidad:hover {
+    cursor: pointer;
+}
+
+.icono_habilidad span {
+    width: 100px;
+    font-size: .7rem;
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 0;
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    margin-left: -50px;
+    z-index: 1;
+    box-shadow: var(--main-bg-color) 0px 0px 3px;
+    font-weight: 500;
+}
+
+.icono_habilidad span::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.icono_habilidad:hover span {
+    transition: opacity .2s ease-in-out;
+    opacity: 1;
+}
+
+.icono_habilidad.top span::after{
+    margin-left: -5px;
+    top: 100%;
+    left: 50%;
+    border-color: var(--main-text-color) transparent transparent transparent;
+}
+
+.icono_habilidad img {
+    width: 45px;
+}
+/* FIN SECCIÓN HABILIDADES */
+
+/* SECCIÓN PROYECTOS */
+.proyectos {
+    width: 100%;
+    background-color: var(--main-bg-color);
+    padding: 20px;
+}
+
+.proyectos h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 50px;
+}
+
+.componente_slider {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto 100px auto;
+    position: relative;
+}
+
+.contenedor_slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--main-text-color);
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    margin-left: -100%;
+}
+
+.seccion_slider {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.seccion_slider:hover .info_slider {
+    transition: bottom .3s ease-in-out;
+    bottom: 0px;
+}
+
+.info_slider {
+    width: 100%;
+    max-height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(3, 25, 39, .9);
+    padding: 20px;
+    position: absolute;
+    transition: bottom .3s ease-in-out;
+    bottom: -50%;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.encabezado_info_slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado_info_slider p {
+    font-size: 2rem;
+    color: var(--main-text-color);
+    font-weight: 500;
+}
+
+.tecnologias_fecha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.tecnologias_fecha i {
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--main-text-color);
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.tecnologias_fecha p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--main-text-color);
+    font-weight: 200;
+    border-radius: 5px;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.descripcion_slider {
+    width: 100%;
+    color: var(--main-text-color);
+    font-weight: 200;
+    text-align: justify;
+}
+
+.links_slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.links_slider button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: background-color .2s ease-in-out;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button;
+    -moz: none;
+    -ms: none;
+    border: 2px solid var(--main-details-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.links_slider button:hover {
+    transition: background-color .2s ease-in-out;
+    background-color: var(--main-details-color);
+}
+
+.links_slider a {
+    color: var(--main-text-color);
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.boton_izda_slider {
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: -50px;
+    z-index: 1;
+}
+
+.boton_izda_slider:hover {
+    cursor: pointer;
+}
+
+.boton_izda_slider i {
+    font-size: 2rem;
+    color: var(--main-text-color);
+}
+
+.boton_dcha_slider {
+    position: absolute;
+    top: calc(50% - 1rem);
+    right: -50px;
+    z-index: 1;
+}
+
+.boton_dcha_slider:hover {
+    cursor: pointer;
+}
+
+.boton_dcha_slider i {
+    font-size: 2rem;
+    color: var(--main-text-color);
+}
+
+/* .indice_slider {
+    width: 15%;
+    min-width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: var(--main-text-color);
+    opacity: .4;
+}
+
+.link_slider_activo {
+    opacity: 1!important;
+} */
+/* FIN SECCIÓN PROYECTOS */
+
+/* SECCIÓN CONTACTO */
+.contacto {
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+}
+
+.contacto h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 80px;
+}
+
+.formulario {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 0 auto 50px auto;
+}
+
+.input_email {
+    width: 100%;
+    border-bottom: 2px solid rgba(248, 241, 255, .7);
+    position: relative;
+}
+
+.input_email input {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.input_asunto {
+    width: 100%;
+    border-bottom: 2px solid rgba(248, 241, 255, .7);
+    position: relative;
+}
+
+.input_asunto input {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.input_mensaje {
+    width: 100%;
+    border-bottom: 2px solid rgba(248, 241, 255, .7);
+    position: relative;
+}
+
+.input_mensaje textarea {
+    width: 100%;
+    font-size: 1.2rem;
+    resize: none;
+}
+
+.formulario input[type='email'], input[type='text'], textarea {
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-color);
+    padding: 5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-text-fill-color: var(--main-text-color) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.formulario input, textarea:focus {
+    outline: none;
+}
+
+.formulario label {
+    color: rgba(248, 241, 255, .7);
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    cursor: text;
+}
+
+.boton_formulario {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: background-color .2s ease-in-out;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button;
+    -moz: none;
+    -ms: none;
+    border: 2px solid var(--main-details-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: var(--main-text-color);
+}
+
+.boton_formulario:hover {
+    transition: background-color .2s ease-in-out;
+    background-color: var(--main-details-color);
+}
+/* FIN SECCIÓN CONTACTO */
+
+/* FOOTER */
+.pie {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: var(--main-bg-color);
+}
+
+.pie p {
+    color: var(--main-text-color);
+    font-weight: 300;
+}
+/* FIN FOOTER */
+
+/* ICONO RRSS */
+.rrss {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.rrss > i {
+    font-size: 2rem;
+    color: rgba(248, 241, 255, 1);
+    background-image: linear-gradient(to right bottom, #ba5c12, #c7671c, #d57225, #e27d2d, #f08836);
+    border-radius: 5px;
+    padding: 10px 12px;
+    z-index: 4;
+}
+
+.menu_rrss {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: -125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-bottom: 5px;
+    transition: bottom .3s ease-in-out;
+}
+
+.menu_rrss i {
+    font-size: 2rem;
+    color: var(--main-text-color);
+    cursor: pointer;
+}
+
+.menu_rrss i:hover {
+    transform: scale(.95);
+}
+/* FIN ICONO RRSS */
+
+/* FLECHA SUBIR HACIA SOBRE MI */
+.flecha_subir {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.flecha_subir i {
+    font-size: 2rem;
+    color: rgba(248, 241, 255, 1);
+    background-image: linear-gradient(to right bottom, #ba5c12, #c7671c, #d57225, #e27d2d, #f08836);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 4;
+}
+/* FIN FLECHA SUBIR HACIA SOBRE MI */

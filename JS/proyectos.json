@@ -1,0 +1,31 @@
+[
+    {
+        "nombre": "G2CURSOS",
+        "descripcion": "Proyecto realizado junto con Iosu Ibarguren y Unai Corzo. Aplicación web sobre cursos online y presenciales en el ámbito de la informática. En ella el usuario puede registrarse y/o iniciar sesión para suscribirse a cursos. Adicionalmente un usuario puede hacerse creador de cursos, en cuyo caso accederá a opciones adicionales diferentes. También existen administradores, los cuales gestionan la aplicación a través de su 'panel de administrador'.",
+        "tecnologias": "<i class='fab fa-laravel'></i><i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i>",
+        "fecha": "2022",
+        "website": "#",
+        "github": "#",
+        "imagen" : "IMG/proyectos/g2cursos.png"
+    },
+
+    {
+        "nombre": "JUEGO HARRY POTTER",
+        "descripcion": "Realizado junto con Juanjo García. Juego de preguntas y respuestas sobre Harry Potter. En él puedes seleccionar un nombre y un avatar y jugar, al finalizar se muestra un ranking de jugadores (almacenados en una base de datos). Este proyecto me ayudó a prácticar en profundidad CSS Flex, CSS Grid y Ajax con Javascript.",
+        "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i><i class='fab fa-php'></i>",
+        "fecha": "2021",
+        "website": "#",
+        "github": "#",
+        "imagen" : "IMG/proyectos/harrypotter.png"
+    },
+
+    {
+        "nombre": "GESTOR DE TAREAS",
+        "descripcion": "Gestor de tareas que permite crear usuarios, añadir y eliminar tareas y buscar tareas en base a diferentes criterios (por nombre, por usuario y por fecha de creación). Este proyecto me ayudó a aprender como desarrollar aplicaciones web en el framework Laravel.",
+        "tecnologias": "<i class='fab fa-laravel'></i><i class='fab fa-html5'></i><i class='fab fa-bootstrap'></i><i class='fab fa-css3-alt'></i>",
+        "fecha": "2021",
+        "website": "#",
+        "github": "#",
+        "imagen" : "IMG/proyectos/tareas.png"
+    }
+]
