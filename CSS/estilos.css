@@ -17,6 +17,7 @@
 
 .contenedor {
     width: 100%;
+    overflow: hidden;
 }
 
 /* CABECERA */
@@ -69,7 +70,7 @@
     color: var(--main-text-color);
     padding: 0 10px;
     background-image: linear-gradient(var(--main-text-color), var(--main-text-color));
-    background-position: 0% 100%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 0% 3px;
     transition: background-size .3s;
@@ -116,10 +117,18 @@
     backdrop-filter: blur(20px);
     box-shadow: rgba(3, 25, 39, 1) 0 0 10px;
 }
+
+.cabecera > i {
+    display: none;
+}
+
+.menu_responsive {
+    display: none;
+}
 /* FIN CABECERA */
 
-/* SECCIÓN SOBRE MÍ */
-.sobre_mi {
+/* SECCIÓN INICIO */
+.inicio {
     width: 100%;
     height: 100vh;
     background-image: url(../IMG/fondo1.jpg);
@@ -128,7 +137,7 @@
     background-size: cover;
 }
 
-.contenido_sobre_mi {
+.contenido_inicio {
     width: 100%;
     height: 100%;
     display: flex;
@@ -200,6 +209,7 @@
     width: 100%;
     background-color: var(--secondary-bg-color);
     padding: 20px;
+    position: relative;
 }
 
 .habilidades h2 {
@@ -210,50 +220,31 @@
     margin-bottom: 50px;
 }
 
-.acordeon {
+.paneles_habilidades {
     width: 80%;
-    border-radius: 5px;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
     margin: 0 auto 50px auto;
+    z-index: 2;
+}
+
+.panel {
+    flex-basis: 45%;
+    margin-bottom: 50px;
 }
 
 .cabecera_panel {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--main-bg-color);
-    border-radius: 5px;
-}
-
-.cabecera_panel:hover {
-    cursor: pointer;
-}
-
-.cabecera_panel p {
+    text-align: center;
     font-size: 1.2rem;
     color: var(--main-text-color);
     font-weight: 300;
-}
-
-.cabecera_panel i {
-    font-size: 1.7rem;
-    color: var(--main-text-color);
-}
-
-.panel {
-    will-change: transition, max-height;
-    max-height: 0px;
-    overflow: hidden;
-    background-color: var(--main-bg-color);
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-#panel1, #panel2, #panel3, #panel4 {
-    background-color: var(--main-bg-color);
-    border-radius: 5px;
+    padding-right: 1px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(248, 241, 255, .7);
 }
 
 .iconos_habilidades {
@@ -261,13 +252,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:  70px;
-    padding: 50px 30px 30px 30px;
+    flex-wrap: wrap;
+    gap:  20px;
+    padding: 20px 0;
 }
 
 .icono_habilidad {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,8 +280,8 @@
     font-size: .7rem;
     transition: opacity .2s ease-in-out;
     opacity: 0;
-    background-color: var(--main-text-color);
-    color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     text-align: center;
     border-radius: 5px;
     padding: 6px 0;
@@ -318,11 +310,11 @@
     margin-left: -5px;
     top: 100%;
     left: 50%;
-    border-color: var(--main-text-color) transparent transparent transparent;
+    border-color: var(--main-bg-color) transparent transparent transparent;
 }
 
 .icono_habilidad img {
-    width: 45px;
+    width: 40px;
 }
 /* FIN SECCIÓN HABILIDADES */
 
@@ -344,7 +336,7 @@
 .componente_slider {
     width: 80%;
     height: 500px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 90px auto;
     position: relative;
 }
 
@@ -368,6 +360,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center 0px;
     position: relative;
 }
 
@@ -378,17 +371,17 @@
 
 .info_slider {
     width: 100%;
-    max-height: 60%;
+    height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     background-color: rgba(3, 25, 39, .9);
     padding: 20px;
     position: absolute;
     transition: bottom .3s ease-in-out;
-    bottom: -50%;
+    bottom: -60%;
     left: 0px;
     right: 0px;
     box-shadow: 0px 0px 10px black;
@@ -398,7 +391,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    gap: 10px;
 }
 
 .encabezado_info_slider p {
@@ -480,7 +474,6 @@
     position: absolute;
     top: calc(50% - 1rem);
     left: -50px;
-    z-index: 1;
 }
 
 .boton_izda_slider:hover {
@@ -496,7 +489,6 @@
     position: absolute;
     top: calc(50% - 1rem);
     right: -50px;
-    z-index: 1;
 }
 
 .boton_dcha_slider:hover {
@@ -508,25 +500,31 @@
     color: var(--main-text-color);
 }
 
-/* .indice_slider {
-    width: 15%;
-    min-width: 15%;
+.indice_slider {
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     position: absolute;
-    bottom: -50px;
+    bottom: -40px;
     left: 0px;
     right: 0px;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    color: var(--main-text-color);
+    margin: 0 auto;  
+}
+
+.indice_slider div {
+    width: 40px;
+    height: 4px;
+    background-color: var(--main-text-color);
     opacity: .4;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
 }
 
 .link_slider_activo {
     opacity: 1!important;
-} */
+}
 /* FIN SECCIÓN PROYECTOS */
 
 /* SECCIÓN CONTACTO */
@@ -534,6 +532,7 @@
     width: 100%;
     background-color: var(--secondary-bg-color);
     padding: 20px;
+    position: relative;
 }
 
 .contacto h2 {
@@ -551,7 +550,8 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin: 0 auto 50px auto;
+    margin: 50px auto;
+    z-index: 1s;
 }
 
 .input_email {
@@ -589,6 +589,7 @@
 }
 
 .formulario input[type='email'], input[type='text'], textarea {
+    height: auto;
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
@@ -607,12 +608,22 @@ input:-webkit-autofill:active{
     outline: none;
 }
 
-.formulario label {
+.formulario .label_formulario {
     color: rgba(248, 241, 255, .7);
     position: absolute;
     bottom: 5px;
     left: 5px;
     font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    cursor: text;
+}
+
+#email-error, #asunto-error, #mensaje-error {
+    color: rgba(186, 92, 18, .9);
+    position: absolute;
+    bottom: -25px;
+    left: 5px;
+    font-size: .8rem;
     transition: all .2s ease-in-out;
     cursor: text;
 }

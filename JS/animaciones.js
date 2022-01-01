@@ -2,6 +2,7 @@
 window.onscroll = function(){
     fijarSoltar();
     scrollActivo();
+    ocultarMenu();
 };
 
 var nav = document.getElementById("nav");
@@ -74,6 +75,7 @@ function ocultarRrss() {
 
 // BOTON SUBIR ARRIBA ANIMACIÓN APARECER Y DESAPARECER
 $(window).scroll(function(){
+    console.log($(this).scrollTop());
     if($(this).scrollTop() > 500){
         $('.flecha_subir').fadeIn();
     } 
@@ -96,40 +98,6 @@ var fecha = new Date();
 var fecha = fecha.getFullYear();
 elemento_fecha.innerHTML = fecha;
 
-// ANIMACIONES ACORDEÓN HABILIDADES
-const cabeceras_paneles = $('.cabecera_panel');
-cabeceras_paneles.click(desplegar);
-
-function desplegar() {
-    const cabecera_panel = $(this);
-    let id_panel = cabecera_panel.parent().attr('id');
-
-    const panel = $('#' + id_panel + ' .panel');
-    panel.css('transition', 'max-height .2s ease-in-out');
-    panel.css('max-height', '500px');
-
-    cabecera_panel.click(ocultar);
-
-    const icono_panel = $('#' + id_panel + ' i');
-    icono_panel.css('transition', 'transform .3s ease-in-out');
-    icono_panel.css('transform', 'rotate(180deg)');
-}
-
-function ocultar() {
-    const cabecera_panel = $(this);
-    let id_panel = cabecera_panel.parent().attr('id');
-
-    const panel = $('#' + id_panel + ' .panel');
-    panel.css('transition', 'max-height .2s ease-in-out');
-    panel.css('max-height', '0px');
-
-    cabecera_panel.click(desplegar);
-
-    const icono_panel = $('#' + id_panel + ' i');
-    icono_panel.css('transition', 'transform .3s ease-in-out');
-    icono_panel.css('transform', 'rotate(0deg)');
-}
-
 // AJAX PROYECTOS
 $.ajax({
     url: "JS/proyectos.json",
@@ -137,10 +105,19 @@ $.ajax({
     success: cargarProyectos
 });
 
+let num_proyecto = 0;
+
 function cargarProyectos(json) {
     $('.slider').css('width', (json.length *100) + '%');
     for (let i = 0; i < json.length; i++) {
-        $('.slider').html($('.slider').html() + "<div class='seccion_slider' style='background-image: url(" + json[i].imagen + ");'><div class='info_slider'><div class='encabezado_info_slider'><p>" + json[i].nombre + "</p><div class='tecnologias_fecha'>" + json[i].tecnologias + "<p class='fecha'>" + json[i].fecha + "</p></div></div><div class='descripcion_slider'><p>" + json[i].descripcion + "</p></div><div class='links_slider'><button type='button'><a href='" + json[i].website + "'>Link website</a></button><button type='button'><a href='" + json[i].github + "'>Link Github</a></button></div></div></div>");
+        $('.slider').html($('.slider').html() + "<div class='seccion_slider' style='background-image: url(" + json[i].imagen + ");'><div class='info_slider'><div class='encabezado_info_slider'><p>" + json[i].nombre + "</p><div class='tecnologias_fecha'>" + json[i].tecnologias + "<p class='fecha'>" + json[i].fecha + "</p></div></div><div class='descripcion_slider'><p>" + json[i].descripcion + "</p></div><div class='links_slider'><button type='button'><a href='" + json[i].website + "'>Link website</a></button><button type='button'><a href='" + json[i].github + "'>Link repositorio</a></button></div></div></div>");
+        
+        if (i == 0) {
+            $('.indice_slider').html($('.indice_slider').html() + "<div class='link_slider_activo'></div>");
+        }
+        else {
+            $('.indice_slider').html($('.indice_slider').html() + "<div></div>");
+        }
     }
 
     // ANIMACIONES SLIDER PROYECTOS
@@ -156,6 +133,8 @@ function cargarProyectos(json) {
     boton_dcha.addEventListener('click', siguiente);
     boton_izda.addEventListener('click', anterior);
 
+    const indices_proyectos = $('.indice_slider div');
+
     function siguiente() {
         let primera_seccion_slider = document.getElementsByClassName('seccion_slider')[0];
         slider.style.marginLeft = '-200%';
@@ -165,6 +144,26 @@ function cargarProyectos(json) {
             slider.insertAdjacentElement('beforeend', primera_seccion_slider);
             slider.style.marginLeft = "-100%";
         }, 200);
+
+        if(num_proyecto == (json.length - 1)) {
+            num_proyecto = 0;
+        }
+        else {
+            num_proyecto++;
+        }
+
+        indices_proyectos.each(function(i) {
+            console.log("NUM PROYECTO: " + num_proyecto);
+            console.log("NUM ÍNDICE: " + i);
+            let indice_proyecto = $(this);
+            if (i == num_proyecto) {
+                indice_proyecto.addClass('link_slider_activo');
+            }
+            else {
+                indice_proyecto.removeClass('link_slider_activo');
+            }
+            
+        });
     }
     
     function anterior() {
@@ -177,6 +176,24 @@ function cargarProyectos(json) {
             slider.insertAdjacentElement('afterbegin', ultima_seccion_slider);
             slider.style.marginLeft = "-100%";
         }, 200);
+
+        if(num_proyecto == 0) {
+            num_proyecto = json.length - 1;
+        }
+        else {
+            num_proyecto--;
+        }
+
+        indices_proyectos.each(function(i) {
+            let indice_proyecto = $(this);
+            if (i == num_proyecto) {
+                indice_proyecto.addClass('link_slider_activo');
+            }
+            else {
+                indice_proyecto.removeClass('link_slider_activo');
+            }
+            
+        });
     }
 }
 
@@ -189,7 +206,7 @@ function seleccionar() {
     const input_formulario = $(this);
     let id_parent = input_formulario.parent().attr('id');
 
-    const label_input = $('#' + id_parent + ' label');
+    const label_input = $('#' + id_parent + ' .label_formulario');
     label_input.css('transition', 'all .2s ease-in-out');
     label_input.css('bottom', '100%');
     label_input.css('font-size', '.8rem');
@@ -204,7 +221,7 @@ function deseleccionar() {
     const input_formulario = $(this);
     let id_parent = input_formulario.parent().attr('id');
 
-    const  label_input = $('#' + id_parent + ' label');
+    const  label_input = $('#' + id_parent + ' .label_formulario');
     label_input.css('transition', 'all .2s ease-in-out');
     label_input.css('color', 'rgba(248, 241, 255, .7)');
 
@@ -216,5 +233,78 @@ function deseleccionar() {
         label_input.css('font-size', '1.2rem');
         label_input.css('color', 'rgba(248, 241, 255, .7)');
         label_input.css('cursor', 'text');
+    }
+}
+
+// VALIDACIÓN FORMULARIOS
+$.validator.addMethod("formatoEmail", function (value, element) {
+    var pattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+    return this.optional(element) || pattern.test(value);
+});
+
+$("#formulario_contacto").validate({
+    onkeyup: false,
+    rules: {
+        email: {
+            required: true,
+            formatoEmail: true,
+            email: true,
+        },
+        asunto: {
+            required: true,
+            maxlength: 50,
+        },
+        mensaje: {
+            required: true,
+        }
+    },
+    messages: {
+        email: {
+            required: "El email es requerido",
+            formatoEmail: "Formato de email no válido",
+            email: "Formato de email no válido",
+        },
+        asunto: {
+            required: "El asunto es requerido",
+            maxlength: "El asunto no puede exceder los 32 caracteres",
+        },
+        mensaje: {
+            required: "El mensaje es requerido",
+        }
+    },
+});
+
+// MENU RESPONSIVE
+const icono_menu = $('.cabecera > i');
+const icono_cerrar = $('.menu_responsive i');
+const menu_responsive = $('.menu_responsive');
+const secciones_pagina = $('section');
+const links_pagina = $('a');
+
+icono_menu.click(desplegarMenu);
+icono_cerrar.click(ocultarMenu);
+secciones_pagina.click(ocultarMenu);
+links_pagina.click(ocultarMenu);
+
+function desplegarMenu() {
+    icono_menu.css('display', 'none');
+    icono_cerrar.css("display", "inline")
+    menu_responsive.css('transition', 'right .2s ease-in-out');
+    menu_responsive.css('right', '0');
+}
+
+function ocultarMenu() {
+    if($(window).width() <= 768) {
+        menu_responsive.css("right", "-30%")
+        icono_menu.css("display", "inline")
+        icono_cerrar.css("display", "none")
+        menu_responsive.css("transition", "all .3s ease")
+    }
+
+    if($(window).width() <= 425) {
+        menu_responsive.css("right", "-50%")
+        icono_menu.css("display", "inline")
+        icono_cerrar.css("display", "none")
+        menu_responsive.css("transition", "all .3s ease")
     }
 }

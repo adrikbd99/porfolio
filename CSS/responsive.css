@@ -1,0 +1,135 @@
+:root {
+    --main-bg-color: #031927ff;
+    --secondary-bg-color: #548687ff;
+    --main-text-color: #f8f1ffff;
+    --main-details-color: #ba5c12ff;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecera > ul {
+        display: none;
+    }
+
+    .cabecera i {
+        display: inline;
+        font-size: 1.7rem;
+        color: var(--main-text-color);
+        cursor: pointer;
+    }
+
+    .menu_responsive {
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -30%;
+        z-index: 1;
+        padding: 20px;
+        background-color: var(--main-bg-color);
+        box-shadow: rgba(3, 25, 39, 1) 0 0 10px;
+    }
+
+    .menu_responsive ul {
+        height: 50%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .boton_cv {
+        margin-left: 0;
+    }
+
+    .menu_responsive i {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        font-size: 1.7rem;
+        color: var(--main-text-color);
+        cursor: pointer;
+    }
+
+    .info {
+        width: 80%;
+    }
+
+    .info p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .info_slider {
+        height: 80%;
+        bottom: -80%;
+    }
+
+    .formulario {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .cabecera h1 {
+        font-size: 1.1rem;
+    }
+
+    .menu_responsive {
+        width: 50%;
+        right: -50%;
+    }
+
+    .cabecera i {
+        font-size: 1.1rem;
+    }
+
+    .info h2 {
+        font-size: 2.5rem;
+    }
+
+    .info h2 span {
+        font-size: 2.5rem;
+    }
+
+    .info p {
+        font-size: 1rem;
+    }
+
+    .boton_ver_proyectos a {
+        padding: 10px 20px;
+    }
+
+    .panel {
+        flex-basis: 100%;
+    }
+
+    .componente_slider {
+        height: 350px;
+    }
+
+    .info_slider {
+        height: 100%;
+        bottom: -100%;
+    }
+
+    .encabezado_info_slider p {
+        font-size: 1rem;
+    }
+
+    .tecnologias_fecha i {
+        font-size: 1rem;
+    }
+
+    .tecnologias_fecha p {
+        font-size: .8rem;
+    }
+
+    .descripcion_slider {
+        font-size: .8rem;
+    }
+
+    .indice_slider {
+        width: 60%;
+    }
+}

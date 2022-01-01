@@ -1,22 +1,12 @@
 [
     {
-        "nombre": "G2CURSOS",
-        "descripcion": "Proyecto realizado junto con Iosu Ibarguren y Unai Corzo. Aplicación web sobre cursos online y presenciales en el ámbito de la informática. En ella el usuario puede registrarse y/o iniciar sesión para suscribirse a cursos. Adicionalmente un usuario puede hacerse creador de cursos, en cuyo caso accederá a opciones adicionales diferentes. También existen administradores, los cuales gestionan la aplicación a través de su 'panel de administrador'.",
-        "tecnologias": "<i class='fab fa-laravel'></i><i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i>",
+        "nombre": "PORFOLIO",
+        "descripcion": "Este porfolio, diseñado y desarrollado por mi, refleja el aprendizaje que he recorrido en el Grado Superior de DAW. Desarrollado en HTML, CSS y JS (junto con JQUERY) me ha servido también para plasmar esos conocimientos que he adquirido, buscando un diseño moderno y minimalista que refleje el desarrollo web tal y como yo lo entiendo.",
+        "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i>",
         "fecha": "2022",
         "website": "#",
         "github": "#",
-        "imagen" : "IMG/proyectos/g2cursos.png"
-    },
-
-    {
-        "nombre": "JUEGO HARRY POTTER",
-        "descripcion": "Realizado junto con Juanjo García. Juego de preguntas y respuestas sobre Harry Potter. En él puedes seleccionar un nombre y un avatar y jugar, al finalizar se muestra un ranking de jugadores (almacenados en una base de datos). Este proyecto me ayudó a prácticar en profundidad CSS Flex, CSS Grid y Ajax con Javascript.",
-        "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i><i class='fab fa-php'></i>",
-        "fecha": "2021",
-        "website": "#",
-        "github": "#",
-        "imagen" : "IMG/proyectos/harrypotter.png"
+        "imagen" : "IMG/proyectos/porfolio.png"
     },
 
     {
@@ -27,5 +17,35 @@
         "website": "#",
         "github": "#",
         "imagen" : "IMG/proyectos/tareas.png"
+    },
+
+    {
+        "nombre": "HARRY WEB",
+        "descripcion": "Realizado junto con Juanjo García. Juego de preguntas y respuestas sobre Harry Potter. En él puedes seleccionar un nombre y un avatar y jugar, al finalizar se muestra un ranking de jugadores (almacenados en una base de datos). Este proyecto me ayudó a prácticar en profundidad CSS Flex, CSS Grid, Ajax con Javascript y relaciones en una base de datos.",
+        "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i><i class='fab fa-php'></i><i class='fas fa-database'></i>",
+        "fecha": "2021",
+        "website": "#",
+        "github": "#",
+        "imagen" : "IMG/proyectos/harrypotter.png"
+    },
+
+    {
+        "nombre": "AGENDA",
+        "descripcion": "Agenda de contactos, en ella puedes guardar el nombre y el email de cuantas personas quieras. Este proyecto está realizado enteramente en PHP, utilizando cookies y sessiones.",
+        "tecnologias": "<i class='fab fa-php'></i><i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i>",
+        "fecha": "2021",
+        "website": "#",
+        "github": "#",
+        "imagen" : "IMG/proyectos/agenda.png"
+    },
+
+    {
+        "nombre": "ZUBIRI MUSIC",
+        "descripcion": "Este fue mi primer proyecto front-end, se trata de una web sobre música (artistas, conciertos...). El objetivo de este proyecto era profundizar en etiquetas y semántica HTML y en estilos CSS",
+        "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i>",
+        "fecha": "2021",
+        "website": "#",
+        "github": "#",
+        "imagen" : "IMG/proyectos/zubirimusic.png"
     }
 ]
