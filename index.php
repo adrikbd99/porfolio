@@ -36,6 +36,11 @@
                     <button type="button" class="boton_cv">
                         <a href="IMG/CV_Adrián_García_González.pdf" target="blank" download="CV_Adrián_García_González" title="Descargar CV">Descargar CV</a>
                     </button>
+                    <div class="rrss_responsive">
+                        <a href="https://www.google.com" target="_blank" title="Mi perfil de GitHub"><i class="fab fa-github-square elementos_rrss"></i></a>
+                        <a href="https://www.google.com" target="_blank" title="Mi perfil de Linkedin"><i class="fab fa-linkedin elementos_rrss"></i></a>
+                        <a href="https://www.google.com" target="_blank" title="Mi correo electrónico"><i class="fas fa-envelope-square elementos_rrss"></i></a>
+                    </div>
                 </ul>
             </div>
         </header>

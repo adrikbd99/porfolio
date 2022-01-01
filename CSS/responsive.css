@@ -10,7 +10,7 @@
         display: none;
     }
 
-    .cabecera i {
+    .cabecera > i {
         display: inline;
         font-size: 1.7rem;
         color: var(--main-text-color);
@@ -42,7 +42,8 @@
         margin-left: 0;
     }
 
-    .menu_responsive i {
+    .menu_responsive > i {
+        display: none;
         position: fixed;
         top: 30px;
         right: 30px;
@@ -68,6 +69,27 @@
     .formulario {
         width: 80%;
     }
+
+    .rrss {
+        display: none;
+    }
+
+    .rrss_responsive {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .rrss_responsive a {
+        text-decoration: none;
+    }
+
+    .rrss_responsive i {
+        font-size: 2rem;
+        color: var(--main-text-color);
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -80,7 +102,11 @@
         right: -50%;
     }
 
-    .cabecera i {
+    .cabecera > i {
+        font-size: 1.1rem;
+    }
+
+    .menu_responsive > i {
         font-size: 1.1rem;
     }
 
