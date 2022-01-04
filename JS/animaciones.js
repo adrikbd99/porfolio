@@ -75,7 +75,6 @@ function ocultarRrss() {
 
 // BOTON SUBIR ARRIBA ANIMACIÓN APARECER Y DESAPARECER
 $(window).scroll(function(){
-    console.log($(this).scrollTop());
     if($(this).scrollTop() > 500){
         $('.flecha_subir').fadeIn();
     } 
@@ -98,6 +97,25 @@ var fecha = new Date();
 var fecha = fecha.getFullYear();
 elemento_fecha.innerHTML = fecha;
 
+// PESTAÑAS SOBRE MI
+const pestanas = $('.pestanas p');
+pestanas.click(mostrarPestana);
+
+function mostrarPestana() {
+    const pestana = $(this);
+    let id_pestana = pestana.attr('data-bs-toggle');
+
+    ocultarPestanas();
+    $(id_pestana).css('display', 'flex');
+
+    pestanas.removeClass('pestana_activa');
+    pestana.addClass('pestana_activa');
+}
+
+function ocultarPestanas() {
+    $('.contenido_pestanas div').css('display', 'none');
+}
+
 // AJAX PROYECTOS
 $.ajax({
     url: "JS/proyectos.json",
@@ -108,92 +126,8 @@ $.ajax({
 let num_proyecto = 0;
 
 function cargarProyectos(json) {
-    $('.slider').css('width', (json.length *100) + '%');
     for (let i = 0; i < json.length; i++) {
-        $('.slider').html($('.slider').html() + "<div class='seccion_slider' style='background-image: url(" + json[i].imagen + ");'><div class='info_slider'><div class='encabezado_info_slider'><p>" + json[i].nombre + "</p><div class='tecnologias_fecha'>" + json[i].tecnologias + "<p class='fecha'>" + json[i].fecha + "</p></div></div><div class='descripcion_slider'><p>" + json[i].descripcion + "</p></div><div class='links_slider'><button type='button'><a href='" + json[i].website + "'>Link website</a></button><button type='button'><a href='" + json[i].github + "'>Link repositorio</a></button></div></div></div>");
-        
-        if (i == 0) {
-            $('.indice_slider').html($('.indice_slider').html() + "<div class='link_slider_activo'></div>");
-        }
-        else {
-            $('.indice_slider').html($('.indice_slider').html() + "<div></div>");
-        }
-    }
-
-    // ANIMACIONES SLIDER PROYECTOS
-    const slider = document.getElementsByClassName('slider')[0];
-    const secciones_slider = document.getElementsByClassName('seccion_slider');
-    let ultima_seccion_slider = secciones_slider[secciones_slider.length - 1];
-
-    const boton_izda = document.getElementsByClassName('boton_izda_slider')[0];
-    const boton_dcha = document.getElementsByClassName('boton_dcha_slider')[0];
-
-    slider.insertAdjacentElement('afterbegin', ultima_seccion_slider);
-
-    boton_dcha.addEventListener('click', siguiente);
-    boton_izda.addEventListener('click', anterior);
-
-    const indices_proyectos = $('.indice_slider div');
-
-    function siguiente() {
-        let primera_seccion_slider = document.getElementsByClassName('seccion_slider')[0];
-        slider.style.marginLeft = '-200%';
-        slider.style.transition = 'margin-left .2s ease-in-out';
-        setTimeout(function() {
-            slider.style.transition = "none";
-            slider.insertAdjacentElement('beforeend', primera_seccion_slider);
-            slider.style.marginLeft = "-100%";
-        }, 200);
-
-        if(num_proyecto == (json.length - 1)) {
-            num_proyecto = 0;
-        }
-        else {
-            num_proyecto++;
-        }
-
-        indices_proyectos.each(function(i) {
-            console.log("NUM PROYECTO: " + num_proyecto);
-            console.log("NUM ÍNDICE: " + i);
-            let indice_proyecto = $(this);
-            if (i == num_proyecto) {
-                indice_proyecto.addClass('link_slider_activo');
-            }
-            else {
-                indice_proyecto.removeClass('link_slider_activo');
-            }
-            
-        });
-    }
-    
-    function anterior() {
-        let secciones_slider = document.getElementsByClassName('seccion_slider');
-        let ultima_seccion_slider = document.getElementsByClassName('seccion_slider')[secciones_slider.length - 1];
-        slider.style.marginLeft = '0';
-        slider.style.transition = 'margin-left .2s ease-in-out';
-        setTimeout(function() {
-            slider.style.transition = "none";
-            slider.insertAdjacentElement('afterbegin', ultima_seccion_slider);
-            slider.style.marginLeft = "-100%";
-        }, 200);
-
-        if(num_proyecto == 0) {
-            num_proyecto = json.length - 1;
-        }
-        else {
-            num_proyecto--;
-        }
-
-        indices_proyectos.each(function(i) {
-            let indice_proyecto = $(this);
-            if (i == num_proyecto) {
-                indice_proyecto.addClass('link_slider_activo');
-            }
-            else {
-                indice_proyecto.removeClass('link_slider_activo');
-            }
-            
-        });
+        $('.contenido_proyecto').html($('.contenido_proyecto').html() + "<div class='carta_proyecto' style='background-image: url(" + json[i].imagen + ")'><div class='info_proyecto'><div class='encabezado_proyecto'><h3>" + json[i].nombre + "</h3><div class='tecnologias_fecha'>" + json[i].tecnologias + "<p class='fecha'>" + json[i].fecha + "</p></div></div><div class='descripcion_proyecto'><p>" + json[i].descripcion + "</p></div><div class='links_proyecto'><button type='button'><a href='" + json[i].website + "'>Link website</a></button><button type='button'><a href='" + json[i].github + "'>Link repositorio</a></button></div></div></div>");
     }
 }
 
@@ -260,16 +194,16 @@ $("#formulario_contacto").validate({
     },
     messages: {
         email: {
-            required: "El email es requerido",
-            formatoEmail: "Formato de email no válido",
-            email: "Formato de email no válido",
+            required: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El email es requerido",
+            formatoEmail: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>Formato de email no válido",
+            email: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>Formato de email no válido",
         },
         asunto: {
-            required: "El asunto es requerido",
-            maxlength: "El asunto no puede exceder los 32 caracteres",
+            required: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El asunto es requerido",
+            maxlength: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El asunto no puede exceder los 32 caracteres",
         },
         mensaje: {
-            required: "El mensaje es requerido",
+            required: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El mensaje es requerido",
         }
     },
 });

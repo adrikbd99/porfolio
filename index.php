@@ -18,7 +18,7 @@
             <h1>ADRIÁN <span>GARCÍA GONZÁLEZ</span></h1>
             <ul>
                 <li><a class="elemento_menu activo" href="#inicio">INICIO</a></li>
-                <li><a class="elemento_menu" href="#habilidades">HABILIDADES</a></li>
+                <li><a class="elemento_menu" href="#sobre_mi">SOBRE MI</a></li>
                 <li><a class="elemento_menu" href="#proyectos">PROYECTOS</a></li>
                 <li><a class="elemento_menu" href="#contacto">CONTACTO</a></li>
                 <button type="button" class="boton_cv">
@@ -30,7 +30,7 @@
                 <i class="fas fa-times"></i>
                 <ul>
                     <li><a class="elemento_menu activo" href="#inicio">INICIO</a></li>
-                    <li><a class="elemento_menu" href="#habilidades">HABILIDADES</a></li>
+                    <li><a class="elemento_menu" href="#sobre_mi">SOBRE MI</a></li>
                     <li><a class="elemento_menu" href="#proyectos">PROYECTOS</a></li>
                     <li><a class="elemento_menu" href="#contacto">CONTACTO</a></li>
                     <button type="button" class="boton_cv">
@@ -39,7 +39,7 @@
                     <div class="rrss_responsive">
                         <a href="https://www.google.com" target="_blank" title="Mi perfil de GitHub"><i class="fab fa-github-square elementos_rrss"></i></a>
                         <a href="https://www.google.com" target="_blank" title="Mi perfil de Linkedin"><i class="fab fa-linkedin elementos_rrss"></i></a>
-                        <a href="https://www.google.com" target="_blank" title="Mi correo electrónico"><i class="fas fa-envelope-square elementos_rrss"></i></a>
+                        <a href="https://www.google.com" target="_blank" title="Mi perfil de Twitter"><i class="fab fa-twitter-square elementos_rrss"></i></a>
                     </div>
                 </ul>
             </div>
@@ -55,135 +55,141 @@
                 </button>
             </div>
         </section>
-        <section class="habilidades" id="habilidades">
-            <h2>HABILIDADES</h2>
-            <div class="paneles_habilidades">
-                <div class="panel">
-                    <p class="cabecera_panel">FRONTEND</p>
-                    <div class="iconos_habilidades">
-                    <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/html.png" alt="">
-                            <span>HTML</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/css.png" alt="">
-                            <span>CSS</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/bootstrap.png" alt="">
-                            <span>BOOTSTRAP</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/js.png" alt="">
-                            <span>JAVASCRIPT</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/jquery.png" alt="">
-                            <span>JQUERY</span>
-                        </div> 
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <p class="cabecera_panel">BACKEND</p>
-                    <div class="iconos_habilidades">
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/java.png" alt="">
-                            <span>JAVA</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/php.png" alt="">
-                            <span>PHP</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/laravel.png" alt="">
-                            <span>LARAVEL</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/sql.jpg" alt="">
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="panel">
-                    <p class="cabecera_panel">DESPLIEGUE WEB</p>
-                    <div class="iconos_habilidades">
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/apache.jpg" alt="">
-                            <span>APACHE</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/aws.png" alt="">
-                            <span>AWS</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/docker.png" alt="">
-                            <span>DOCKER</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/ssh.png" alt="">
-                            <span>SSH</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/dns.png" alt="">
-                            <span>DNS</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/mariadb.jpg" alt="">
-                            <span>MARIADB</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/xampp.png" alt="">
-                            <span>XAMPP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <p class="cabecera_panel">SISTEMAS</p>
-                    <div class="iconos_habilidades">
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/windows.png" alt="">
-                            <span>WINDOWS</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/linux.png" alt="">
-                            <span>LINUX</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/redes.png" alt="">
-                            <span>REDES</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/git.png" alt="">
-                            <span>GIT</span>
-                        </div>
-                        <div class="icono_habilidad top">
-                            <img src="IMG/tecnologias/github.png" alt="">
-                            <span>GITHUB</span>
-                        </div>
-                    </div>
+        <section class="sobre_mi" id="sobre_mi">
+            <div class="contenido_imagen">
+                <div class="imagen">
+                    <!-- <img src="IMG/patron_imagen.png" class="patron_imagen" alt="patrón de puntos"> -->
+                    <img src="IMG/perfil.png" alt="foto de perfil">
                 </div>
             </div>
+            <div class="contenido_sobre_mi">
+                <h2>SOBRE MI</h2>
+                <div class="pestanas">
+                    <p class="pestana_activa" data-bs-toggle="#pestana1">PERFIL</p>
+                    <p data-bs-toggle="#pestana2">ESTUDIOS</p>
+                    <p data-bs-toggle="#pestana3">HABILIDADES</p>
+                </div>
+                <div class="contenido_pestanas">
+                    <div id="pestana1">
+                        <p>¡Hola! Yo soy Adrián.</p>
+                        <p>Supongo que aquí debo contar un poco sobre mi, mis aptitudes, mis metas... Pues bien, empecé en esto de la informática allá por 2018, cuando decidí estudiar un grado medio de <i>Sistemas Microinformáticos y Redes</i>. En él aprendí muchas cosas, pero me dí cuenta de que la programación en general me llamaba mucho la atención, por lo que nada más acabar me inscribí en el grado superior de <i>Desarrollo de Aplicaciones Web</i>.</p>
+                        <p>Este es el ciclo que estoy cursando en estos momentos y en el que de momento he aprendido los conceptos generales de la programación además de todo lo relacionado con el desarrollo web. Mi meta es seguir aprendiendo y mejorar día a día para ser un desarrollador profesional.</p>
+                    </div>
+                    <div id="pestana2">
+                        <div class="curso">
+                            <h3>Sistemas Microinformáticos y Redes</h3>
+                            <div class="info_curso">
+                                <p><i class="fas fa-school"></i>Zubiri Manteo</p>
+                                <p><i class="far fa-clock"></i>2000H</p>
+                                <p><i class="far fa-calendar-alt"></i>2018-2020</p>
+                            </div>
+                        </div>
+                        <div class="curso">
+                            <h3>Desarrollo de Aplicaciones Web</h3>
+                            <div class="info_curso">
+                                <p><i class="fas fa-school"></i>Zubiri Manteo</p>
+                                <p><i class="far fa-clock"></i>2000H</p>
+                                <p><i class="far fa-calendar-alt"></i>2020-2022*</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pestana3">
+                        <div class="categoria_habilidad">
+                            <h3>Front-end</h3>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/html.png" alt="HTML"></div>
+                                <p>HTML</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/css.png" alt="CSS"></div>
+                                <p>CSS</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/bootstrap.png" alt="BOOTSTRAP"></div>
+                                <p>BOOTSTRAP</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/js.png" alt="JAVASCRIPT"></div>
+                                <p>JAVASCRIPT</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/jquery.png" alt="JQUERY"></div>
+                                <p>JQUERY</p>
+                            </div>
+                        </div>
+                        <div class="categoria_habilidad">
+                            <h3>Back-end</h3>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/java.png" alt="JAVA"></div>
+                                <p>JAVA</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/php.png" alt="PHP"></div>
+                                <p>PHP</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/laravel.png" alt="LARAVEL"></div>
+                                <p>LARAVEL</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/sql.jpg" alt="SQL"></div>
+                                <p>SQL</p>
+                            </div>
+                        </div>
+                        <div class="categoria_habilidad">
+                            <h3>Despliegue Web</h3>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/apache.jpg" alt="APACHE"></div>
+                                <p>APACHE</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/aws.png" alt="AWS"></div>
+                                <p>AWS</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/docker.png" alt="DOCKER"></div>
+                                <p>DOCKER</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/ssh.png" alt="SSH"></div>
+                                <p>SSH</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/dns.png" alt="DNS"></div>
+                                <p>DNS</p>
+                            </div>
+                        </div>
+                        <div class="categoria_habilidad">
+                            <h3>Sistemas</h3>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/windows.png" alt="WINDOWS"></div>
+                                <p>WINDOWS</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/linux.png" alt="LINUX"></div>
+                                <p>LINUX</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/redes.png" alt="REDES"></div>
+                                <p>REDES</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/git.png" alt="GIT"></div>
+                                <p>GIT</p>
+                            </div>
+                            <div class="habilidad">
+                                <div class="icono_habilidad"><img src="IMG/tecnologias/github.png" alt="GITHUB"></div>
+                                <p>GITHUB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </section>
         <section class="proyectos" id="proyectos">
             <h2>PROYECTOS</h2>
-            <div class="componente_slider">
-                <div class="contenedor_slider">
-                    <div class="slider">
-                        
-                    </div>
-                    <div class="boton_izda_slider">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div class="boton_dcha_slider">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                    <div class="indice_slider">
-                        
-                    </div>
-                </div>
+            <div class="contenido_proyecto">
+
             </div>
         </section>
         <section class="contacto" id="contacto">
@@ -205,14 +211,19 @@
             </form>
         </section>
         <footer class="pie">
-            <p>Adrián García González © <span id="fecha"></span></p>
+            <p>Desarrollado por Adrián García González © <span id="fecha"></span></p>
+            <div class="rrss_pie">
+                <a href="https://www.google.com" target="_blank" title="Mi perfil de GitHub"><i class="fab fa-github-square elementos_rrss"></i></a>
+                <a href="https://www.google.com" target="_blank" title="Mi perfil de Linkedin"><i class="fab fa-linkedin elementos_rrss"></i></a>
+                <a href="https://www.google.com" target="_blank" title="Mi perfil de Twitter"><i class="fab fa-twitter-square elementos_rrss"></i></a>
+            </div>
         </footer>
         <div class="rrss" id="rrss">
             <i class="fas fa-hashtag"></i>
             <div class="menu_rrss" id="menu_rrss">
                 <a href="https://www.google.com" target="_blank" title="Mi perfil de GitHub"><i class="fab fa-github-square elementos_rrss"></i></a>
                 <a href="https://www.google.com" target="_blank" title="Mi perfil de Linkedin"><i class="fab fa-linkedin elementos_rrss"></i></a>
-                <a href="https://www.google.com" target="_blank" title="Mi correo electrónico"><i class="fas fa-envelope-square elementos_rrss"></i></a>
+                <a href="https://www.google.com" target="_blank" title="Mi perfil de Twitter"><i class="fab fa-twitter-square elementos_rrss"></i></a>
             </div>
         </div>
         <div class="flecha_subir">

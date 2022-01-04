@@ -5,6 +5,12 @@
     --main-details-color: #ba5c12ff;
 }
 
+@media screen and (max-width: 1200px) {
+    .carta_proyecto {
+        width: 45%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .cabecera > ul {
         display: none;
@@ -61,9 +67,44 @@
         margin: 0 auto;
     }
 
-    .info_slider {
-        height: 80%;
-        bottom: -80%;
+    .sobre_mi {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .contenido_imagen {
+        width: 50%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .contenido_sobre_mi {
+        width: 100%;
+    }
+
+    .info_curso p {
+        width: 60%;
+    }
+
+    .categoria_habilidad {
+        width: 50%;
+    }
+
+    .categoria_habilidad:nth-child(1), .categoria_habilidad:nth-child(2) {
+        margin-bottom: 40px;
+    }
+
+    .proyectos {
+        padding: 40px 20px;
+    }
+
+    .carta_proyecto {
+        width: 60%;
+    }
+
+    .contacto {
+        padding: 40px 20px;
     }
 
     .formulario {
@@ -79,7 +120,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .rrss_responsive a {
@@ -89,6 +130,13 @@
     .rrss_responsive i {
         font-size: 2rem;
         color: var(--main-text-color);
+        transition: transform .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    .rrss_responsive i:hover {
+        transition: transform .2s ease-in-out;
+        transform: rotate(5deg);
     }
 }
 
@@ -119,6 +167,7 @@
     }
 
     .info p {
+        width: 95%;
         font-size: 1rem;
     }
 
@@ -126,20 +175,45 @@
         padding: 10px 20px;
     }
 
-    .panel {
-        flex-basis: 100%;
+    .contenido_sobre_mi h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
     }
 
-    .componente_slider {
-        height: 350px;
+    .contenido_imagen {
+        width: 70%;
     }
 
-    .info_slider {
-        height: 100%;
-        bottom: -100%;
+    #pestana2 {
+        flex-direction: column;
     }
 
-    .encabezado_info_slider p {
+    .curso {
+        width: 100%;
+    }
+
+    .curso:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .categoria_habilidad {
+        width: 100%;
+    }
+
+    .categoria_habilidad:nth-child(3) {
+        margin-bottom: 40px;
+    }
+
+    .proyectos h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+
+    .carta_proyecto {
+        width: 100%;
+    }
+
+    .encabezado_proyecto h3 {
         font-size: 1rem;
     }
 
@@ -147,15 +221,16 @@
         font-size: 1rem;
     }
 
-    .tecnologias_fecha p {
-        font-size: .8rem;
+    .links_proyecto a {
+        font-size: .9rem;
     }
 
-    .descripcion_slider {
-        font-size: .8rem;
+    .contacto h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
     }
 
-    .indice_slider {
-        width: 60%;
+    .formulario {
+        width: 100%;
     }
 }
