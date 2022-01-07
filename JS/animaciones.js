@@ -128,7 +128,7 @@ let num_proyecto = 0;
 
 function cargarProyectos(json) {
     for (let i = 0; i < json.length; i++) {
-        $('.contenido_proyecto').html($('.contenido_proyecto').html() + "<div class='carta_proyecto' style='background-image: url(" + json[i].imagen + ")'><div class='info_proyecto'><div class='encabezado_proyecto'><h3>" + json[i].nombre + "</h3><div class='tecnologias_fecha'>" + json[i].tecnologias + "<p class='fecha'>" + json[i].fecha + "</p></div></div><div class='descripcion_proyecto'><p>" + json[i].descripcion + "</p></div><div class='links_proyecto'><button type='button'><a href='" + json[i].website + "'>Link website</a></button><button type='button'><a href='" + json[i].github + "'>Link repositorio</a></button></div></div></div>");
+        $('.contenido_proyecto').html($('.contenido_proyecto').html() + "<div class='carta_proyecto' style='background-image: url(" + json[i].imagen + ")'><div class='info_proyecto'><div class='encabezado_proyecto'><h3>" + json[i].nombre + "</h3><div class='tecnologias_fecha'>" + json[i].tecnologias + "<p class='fecha'>" + json[i].fecha + "</p></div></div><div class='descripcion_proyecto'><p>" + json[i].descripcion + "</p></div><div class='links_proyecto'><button type='button'><a href='" + json[i].website + "' target='_blank'>Link website</a></button><button type='button'><a href='" + json[i].github + "' target='_blank'>Link repositorio</a></button></div></div></div>");
     }
 }
 

@@ -4,8 +4,8 @@
         "descripcion": "Este porfolio, diseñado y desarrollado por mi, refleja el aprendizaje que he recorrido en el Grado Superior de DAW. Desarrollado en HTML, CSS y JS (junto con JQUERY) me ha servido también para plasmar esos conocimientos que he adquirido, buscando un diseño moderno y minimalista que refleje el desarrollo web tal y como yo lo entiendo.",
         "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i>",
         "fecha": "2022",
-        "website": "#",
-        "github": "#",
+        "website": "https://adriangarciagonzalez.herokuapp.com/",
+        "github": "https://github.com/adrikbd99/porfolio",
         "imagen" : "IMG/proyectos/porfolio.png"
     },
 
@@ -14,8 +14,8 @@
         "descripcion": "Realizado junto con Juanjo García. Juego de preguntas y respuestas sobre Harry Potter. En él puedes seleccionar un nombre y un avatar y jugar, al finalizar se muestra un ranking de jugadores (almacenados en una base de datos). Este proyecto me ayudó a prácticar en profundidad CSS Flex, CSS Grid, Ajax con Javascript y relaciones en una base de datos.",
         "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i><i class='fab fa-js-square'></i><i class='fab fa-php'></i><i class='fas fa-database'></i>",
         "fecha": "2021",
-        "website": "#",
-        "github": "#",
+        "website": "https://harry-web.000webhostapp.com/harry-web",
+        "github": "https://github.com/adrikbd99/harry_web",
         "imagen" : "IMG/proyectos/harrypotter.png"
     },
 
@@ -24,8 +24,8 @@
         "descripcion": "Este fue mi primer proyecto front-end, se trata de una web sobre música (artistas, conciertos...). El objetivo de este proyecto era profundizar en etiquetas y semántica HTML y en estilos CSS",
         "tecnologias": "<i class='fab fa-html5'></i><i class='fab fa-css3-alt'></i>",
         "fecha": "2020",
-        "website": "#",
-        "github": "#",
+        "website": "https://zubirimusic.herokuapp.com",
+        "github": "https://github.com/adrikbd99/zubiri_music",
         "imagen" : "IMG/proyectos/zubirimusic.png"
     }
 ]
