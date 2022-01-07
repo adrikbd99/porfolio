@@ -169,7 +169,7 @@
 .info p {
     color: var(--main-text-color);
     opacity: .7;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 200;
 }
 
@@ -289,7 +289,7 @@
 
 .contenido_pestanas {
     width: 100%;
-    padding: 20px 5px 0px 5px;
+    padding: 30px 5px 0px 5px;
 }
 
 #pestana2, #pestana3 {
@@ -304,7 +304,7 @@
 #pestana1 p:nth-child(1) {
     color: var(--main-bg-color);
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 200;
     text-align: justify;
     margin-bottom: 10px;
 }
@@ -334,12 +334,15 @@
 }
 
 .curso h3 {
-    width: 100%;
+    width: 90%;
     color: var(--main-bg-color);
     font-size: 1.1rem;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     text-align: center;
+    font-style: italic;
+    border-bottom: 1px solid var(--main-bg-color);
 }
 
 .info_curso {
@@ -382,12 +385,15 @@
 }
 
 .categoria_habilidad h3 {
-    width: 100%;
+    width: 90%;
     color: var(--main-bg-color);
     font-size: 1.1rem;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     text-align: center;
+    font-style: italic;
+    border-bottom: 1px solid var(--main-bg-color);
 }
 
 .habilidad {
@@ -671,7 +677,8 @@
     border: none;
     color: var(--main-text-color);
     padding: 5px;
-    font-weight: 300;
+    font-weight: 200;
+    font-size: 1.1rem;
 }
 
 input:-webkit-autofill,
@@ -691,10 +698,10 @@ input:-webkit-autofill:active{
     position: absolute;
     bottom: 5px;
     left: 5px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: all .2s ease-in-out;
     cursor: text;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 #email-error, #asunto-error, #mensaje-error {
@@ -746,7 +753,7 @@ input:-webkit-autofill:active{
 
 .pie p {
     color: var(--main-text-color);
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .rrss_pie {

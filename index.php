@@ -72,14 +72,14 @@
                 <div class="contenido_pestanas">
                     <div id="pestana1">
                         <p>¡Hola! Yo soy Adrián.</p>
-                        <p>Supongo que aquí debo contar un poco sobre mi, mis aptitudes, mis metas... Pues bien, empecé en esto de la informática allá por 2018, cuando decidí estudiar un grado medio de <i>Sistemas Microinformáticos y Redes</i>. En él aprendí muchas cosas, pero me dí cuenta de que la programación en general me llamaba mucho la atención, por lo que nada más acabar me inscribí en el grado superior de <i>Desarrollo de Aplicaciones Web</i>.</p>
+                        <p>Supongo que aquí debo contar un poco sobre mi, mis aptitudes, mis metas... Pues bien, empecé en esto de la informática allá por 2018, cuando decidí estudiar un grado medio de 'Sistemas Microinformáticos y Redes'. En él aprendí muchas cosas, pero me dí cuenta de que la programación en general me llamaba mucho la atención, por lo que nada más acabar me inscribí en el grado superior de 'Desarrollo de Aplicaciones Web'.</p>
                         <p>Este es el ciclo que estoy cursando en estos momentos y en el que de momento he aprendido los conceptos generales de la programación además de todo lo relacionado con el desarrollo web. Mi meta es seguir aprendiendo y mejorar día a día para ser un desarrollador profesional.</p>
                     </div>
                     <div id="pestana2">
                         <div class="curso">
                             <h3>Sistemas Microinformáticos y Redes</h3>
                             <div class="info_curso">
-                                <p><i class="fas fa-school"></i>Zubiri Manteo</p>
+                                <p><i class="fas fa-map-marked-alt"></i>Zubiri Manteo</p>
                                 <p><i class="far fa-clock"></i>2000H</p>
                                 <p><i class="far fa-calendar-alt"></i>2018-2020</p>
                             </div>
@@ -87,7 +87,7 @@
                         <div class="curso">
                             <h3>Desarrollo de Aplicaciones Web</h3>
                             <div class="info_curso">
-                                <p><i class="fas fa-school"></i>Zubiri Manteo</p>
+                                <p><i class="fas fa-map-marked-alt"></i>Zubiri Manteo</p>
                                 <p><i class="far fa-clock"></i>2000H</p>
                                 <p><i class="far fa-calendar-alt"></i>2020-2022*</p>
                             </div>
