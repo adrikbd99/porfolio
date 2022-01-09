@@ -60,7 +60,7 @@ menu.addEventListener("mouseleave", ocultarRrss);
 
 function mostrarRrss() {
     menu_rrss.style.transition = "height .3s ease-in-out";
-    menu.style.height = "213px";
+    menu.style.height = "250px";
     menu_rrss.style.transition = "bottom .3s ease-in-out";
     menu_rrss.style.bottom = "70px";
 }
@@ -70,7 +70,7 @@ function ocultarRrss() {
         menu.style.height = "";
     }, 300);
     menu_rrss.style.transition = "bottom .3s ease-in-out";
-    menu_rrss.style.bottom = "-125px";
+    menu_rrss.style.bottom = "-145px";
 }
 
 // BOTON SUBIR ARRIBA ANIMACIÓN APARECER Y DESAPARECER

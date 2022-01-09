@@ -7,7 +7,15 @@
 
 @media screen and (max-width: 1200px) {
     .carta_proyecto {
-        width: 45%;
+        width: 47%;
+    }
+
+    .encabezado_proyecto h3 {
+        font-size: 1.5rem;
+    }
+
+    .tecnologias_fecha i {
+        font-size: 1rem;
     }
 }
 
@@ -36,6 +44,7 @@
         padding: 20px;
         background-color: var(--main-bg-color);
         box-shadow: rgba(3, 25, 39, 1) 0 0 10px;
+        padding: 20px 10px;
     }
 
     .menu_responsive ul {
@@ -58,6 +67,14 @@
         cursor: pointer;
     }
 
+    .cabecera li a {
+        padding-bottom: 20px;
+    }
+
+    .cabecera li a:hover {
+        background-size: 0% 3px;
+    }
+
     .info {
         width: 80%;
     }
@@ -67,10 +84,13 @@
         margin: 0 auto;
     }
 
+    .saber_mas {
+        width: 20%;
+    }
+
     .sobre_mi {
         flex-direction: column;
         align-items: center;
-        padding: 40px 20px;
     }
 
     .contenido_imagen {
@@ -83,32 +103,44 @@
         width: 100%;
     }
 
+    .contenido_sobre_mi h2 {
+        text-align: center;
+    }
+
+    .pestanas {
+        justify-content: center;
+    }
+
     .info_curso p {
         width: 60%;
     }
 
-    .categoria_habilidad {
-        width: 50%;
+    .habilidad p {
+        font-size: .8rem;
     }
 
-    .categoria_habilidad:nth-child(1), .categoria_habilidad:nth-child(2) {
-        margin-bottom: 40px;
+    #pestana2 {
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .curso {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .categoria_habilidad {
+        width: 20%;
+        margin-left: 5%;
     }
 
     .proyectos {
-        padding: 40px 20px;
+        padding: 50px 20px;
     }
 
     .carta_proyecto {
         width: 60%;
-    }
-
-    .contacto {
-        padding: 40px 20px;
-    }
-
-    .formulario {
-        width: 80%;
     }
 
     .rrss {
@@ -171,8 +203,12 @@
         font-size: 1rem;
     }
 
-    .boton_ver_proyectos a {
-        padding: 10px 20px;
+    .saber_mas {
+        width: 50%;
+    }
+
+    .sobre_mi {
+        padding: 50px 20px;
     }
 
     .contenido_sobre_mi h2 {
@@ -184,20 +220,17 @@
         width: 70%;
     }
 
-    #pestana2 {
-        flex-direction: column;
-    }
-
     .curso {
         width: 100%;
     }
 
-    .curso:nth-child(1) {
-        margin-bottom: 20px;
+    .categoria_habilidad {
+        width: 40%;
+        margin-left: 10%;
     }
 
-    .categoria_habilidad {
-        width: 100%;
+    .categoria_habilidad:nth-child(1), .categoria_habilidad:nth-child(2) {
+        margin-bottom: 30px;
     }
 
     .categoria_habilidad:nth-child(3) {
@@ -225,12 +258,21 @@
         font-size: .9rem;
     }
 
+    .contacto {
+        padding: 50px 20px;
+    }
+
     .contacto h2 {
         font-size: 3rem;
         margin-bottom: 40px;
     }
 
-    .formulario {
-        width: 100%;
+    .contacto ul li a .icon {
+        font-size: 2rem;
     }
+
+    .contacto ul li a {
+        height: 100px;
+    }
+
 }
