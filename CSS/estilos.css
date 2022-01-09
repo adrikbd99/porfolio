@@ -350,7 +350,7 @@
 }
 
 .curso {
-    width: 50%;
+    width: 45%;
     display: flex!important;
     flex-direction: column;
     justify-content: flex-start;
@@ -359,7 +359,7 @@
     /* border: 2px solid var(--main-text-color); */
     border-radius: 5px;
     padding: 10px 20px;
-    margin-right: 20px;
+    margin-right: 5%;
     background-color: var(--main-bg-color);
 }
 
