@@ -86,6 +86,7 @@
 
     .saber_mas {
         width: 20%;
+        bottom: 70px;
     }
 
     .sobre_mi {
@@ -94,9 +95,7 @@
     }
 
     .contenido_imagen {
-        width: 50%;
-        justify-content: center;
-        margin-bottom: 20px;
+        display: none;
     }
 
     .contenido_sobre_mi {
@@ -143,6 +142,15 @@
         width: 60%;
     }
 
+    .contacto ul li a:hover .icon {
+        color: var(--main-bg-color);
+        transform: rotateY(0deg);
+      }
+
+    .contacto ul li a:hover:before {
+        top: 100%;
+      }
+
     .rrss {
         display: none;
     }
@@ -172,7 +180,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 550px) {
     .cabecera h1 {
         font-size: 1.1rem;
     }

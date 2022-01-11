@@ -60,7 +60,7 @@ menu.addEventListener("mouseleave", ocultarRrss);
 
 function mostrarRrss() {
     menu_rrss.style.transition = "height .3s ease-in-out";
-    menu.style.height = "250px";
+    menu.style.height = "270px";
     menu_rrss.style.transition = "bottom .3s ease-in-out";
     menu_rrss.style.bottom = "70px";
 }
@@ -236,7 +236,7 @@ function ocultarMenu() {
         menu_responsive.css("transition", "all .3s ease")
     }
 
-    if($(window).width() <= 425) {
+    if($(window).width() <= 550) {
         menu_responsive.css("right", "-50%")
         icono_menu.css("display", "inline")
         icono_cerrar.css("display", "none")
