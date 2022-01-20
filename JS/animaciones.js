@@ -132,83 +132,6 @@ function cargarProyectos(json) {
     }
 }
 
-// ANIMACIONES FORMULARIO
-const inputs_formulario = $('.formulario input[type="email"], input[type="text"], textarea');
-inputs_formulario.focus(seleccionar);
-inputs_formulario.blur(deseleccionar);
-
-function seleccionar() {
-    const input_formulario = $(this);
-    let id_parent = input_formulario.parent().attr('id');
-
-    const label_input = $('#' + id_parent + ' .label_formulario');
-    label_input.css('transition', 'all .2s ease-in-out');
-    label_input.css('bottom', '100%');
-    label_input.css('font-size', '.8rem');
-    label_input.css('color', 'rgba(3, 25, 39, .7)');
-    label_input.css('cursor', 'default');
-
-    const div_input = $('#' + id_parent);
-    div_input.css('border-bottom', '2px solid rgba(3, 25, 39, .7)');
-}
-
-function deseleccionar() {
-    const input_formulario = $(this);
-    let id_parent = input_formulario.parent().attr('id');
-
-    const  label_input = $('#' + id_parent + ' .label_formulario');
-    label_input.css('transition', 'all .2s ease-in-out');
-    label_input.css('color', 'rgba(248, 241, 255, .7)');
-
-    const div_input = $('#' + id_parent);
-    div_input.css('border-bottom', '2px solid rgba(248, 241, 255, .7)');
-
-    if ((input_formulario.val().length == 0)) {
-        label_input.css('bottom', '5px');
-        label_input.css('font-size', '1.2rem');
-        label_input.css('color', 'rgba(248, 241, 255, .7)');
-        label_input.css('cursor', 'text');
-    }
-}
-
-// VALIDACIÓN FORMULARIOS
-$.validator.addMethod("formatoEmail", function (value, element) {
-    var pattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-    return this.optional(element) || pattern.test(value);
-});
-
-$("#formulario_contacto").validate({
-    onkeyup: false,
-    rules: {
-        email: {
-            required: true,
-            formatoEmail: true,
-            email: true,
-        },
-        asunto: {
-            required: true,
-            maxlength: 50,
-        },
-        mensaje: {
-            required: true,
-        }
-    },
-    messages: {
-        email: {
-            required: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El email es requerido",
-            formatoEmail: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>Formato de email no válido",
-            email: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>Formato de email no válido",
-        },
-        asunto: {
-            required: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El asunto es requerido",
-            maxlength: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El asunto no puede exceder los 32 caracteres",
-        },
-        mensaje: {
-            required: "<i class='fas fa-exclamation-circle icono_mensaje_formulario'></i>El mensaje es requerido",
-        }
-    },
-});
-
 // MENU RESPONSIVE
 const icono_menu = $('.cabecera > i');
 const icono_cerrar = $('.menu_responsive i');
@@ -222,24 +145,28 @@ secciones_pagina.click(ocultarMenu);
 links_pagina.click(ocultarMenu);
 
 function desplegarMenu() {
-    icono_menu.css('display', 'none');
-    icono_cerrar.css("display", "inline")
+    icono_menu.removeClass('fa-bars');
+    icono_menu.addClass('fa-times-circle');
     menu_responsive.css('transition', 'right .2s ease-in-out');
     menu_responsive.css('right', '0');
+
+    icono_menu.click(ocultarMenu);
 }
 
 function ocultarMenu() {
     if($(window).width() <= 768) {
         menu_responsive.css("right", "-30%")
-        icono_menu.css("display", "inline")
-        icono_cerrar.css("display", "none")
+        icono_menu.addClass('fa-bars');
+        icono_menu.removeClass('fa-times-circle');
         menu_responsive.css("transition", "all .3s ease")
     }
 
     if($(window).width() <= 550) {
         menu_responsive.css("right", "-50%")
-        icono_menu.css("display", "inline")
-        icono_cerrar.css("display", "none")
+        icono_menu.addClass('fa-bars');
+        icono_menu.removeClass('fa-times-circle');
         menu_responsive.css("transition", "all .3s ease")
     }
+
+    icono_menu.click(desplegarMenu);
 }

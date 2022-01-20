@@ -29,6 +29,7 @@
         font-size: 1.7rem;
         color: var(--main-text-color);
         cursor: pointer;
+        z-index: 2;
     }
 
     .menu_responsive {
@@ -57,16 +58,6 @@
         margin-left: 0;
     }
 
-    .menu_responsive > i {
-        display: none;
-        position: fixed;
-        top: 30px;
-        right: 30px;
-        font-size: 1.7rem;
-        color: var(--main-text-color);
-        cursor: pointer;
-    }
-
     .cabecera li a {
         padding-bottom: 20px;
     }
@@ -82,6 +73,7 @@
     .info p {
         width: 80%;
         margin: 0 auto;
+        font-size: 1rem;
     }
 
     .saber_mas {
@@ -142,13 +134,27 @@
         width: 60%;
     }
 
-    .contacto ul li a:hover .icon {
-        color: var(--main-bg-color);
-        transform: rotateY(0deg);
+    .contacto ul li {
+        width: 40%;
+    }
+
+    .contacto ul li a .titulo_contacto {
+        top: 0;
+        opacity: 1;
+    }
+
+    .contacto ul li a .nick_contacto {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .contacto ul li a .icon {
+        color: #fff;
+        transform: rotateY(360deg);
       }
 
-    .contacto ul li a:hover:before {
-        top: 100%;
+    .contacto ul li a:before {
+        top: 0;
       }
 
     .rrss {
@@ -194,10 +200,6 @@
         font-size: 1.1rem;
     }
 
-    .menu_responsive > i {
-        font-size: 1.1rem;
-    }
-
     .info h2 {
         font-size: 2.5rem;
     }
@@ -208,7 +210,7 @@
 
     .info p {
         width: 95%;
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     .saber_mas {
@@ -275,12 +277,8 @@
         margin-bottom: 40px;
     }
 
-    .contacto ul li a .icon {
-        font-size: 2rem;
-    }
-
-    .contacto ul li a {
-        height: 100px;
+    .contacto ul li {
+        width: 100%;
     }
 
 }

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="CSS/estilos.css">
     <link rel="stylesheet" href="CSS/responsive.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/favicon-16x16.png">
     <script src="JS/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script defer src="JS/animaciones.js"></script>
@@ -15,7 +18,7 @@
 <body>
     <div class="contenedor">
         <header class="cabecera" id="nav">
-            <h1>ADRIÁN <span>GARCÍA GONZÁLEZ</span></h1>
+            <a href="#inicio"><h1>ADRIÁN <span>GARCÍA GONZÁLEZ</span></h1></a>
             <ul>
                 <li><a class="elemento_menu activo" href="#inicio">INICIO</a></li>
                 <li><a class="elemento_menu" href="#sobre_mi">SOBRE MI</a></li>
@@ -28,7 +31,6 @@
             </ul>
             <i class="fas fa-bars"></i>
             <div class="menu_responsive">
-                <i class="fas fa-times-circle"></i>
                 <ul>
                     <li><a class="elemento_menu" href="#inicio">INICIO</a></li>
                     <li><a class="elemento_menu" href="#sobre_mi">SOBRE MI</a></li>
@@ -59,8 +61,7 @@
         <section class="sobre_mi" id="sobre_mi">
             <div class="contenido_imagen">
                 <div class="imagen">
-                    <!-- <img src="IMG/patron_imagen.png" class="patron_imagen" alt="patrón de puntos"> -->
-                    <img src="IMG/—Pngtree—25d programmer office material_5460391.png" alt="foto de perfil">
+                    <img src="IMG/vector_sobre_mi.png" alt="foto de perfil">
                 </div>
             </div>
             <div class="contenido_sobre_mi">
@@ -72,7 +73,7 @@
                 </div>
                 <div class="contenido_pestanas">
                     <div id="pestana1">
-                        <p>¡Hola! Yo soy Adrián.</p>
+                        <p>¡Hola! Yo soy Adrián. &#128512</p>
                         <p>Supongo que aquí debo contar un poco sobre mi, mis aptitudes, mis metas... Pues bien, empecé en esto de la informática allá por 2018, cuando decidí estudiar un grado medio de 'Sistemas Microinformáticos y Redes'. En él aprendí muchas cosas, pero me dí cuenta de que la programación en general me llamaba mucho la atención, por lo que nada más acabar me matriculé en el grado superior de 'Desarrollo de Aplicaciones Web'.</p>
                         <p>Este es el ciclo que estoy cursando en estos momentos y en el que he aprendido los conceptos generales de la programación además de todo lo relacionado con el desarrollo web. Mi meta es seguir aprendiendo y mejorar día a día para ser un desarrollador profesional.</p>
                     </div>
@@ -199,39 +200,32 @@
                 <li>
                     <a href="https://github.com/adrikbd99" target="_blank" title="Mi perfil de GitHub">
                         <i class="fab fa-github icon"></i>
+                        <p class="titulo_contacto">GITHUB</p>
+                        <p class="nick_contacto">adrikbd99</p>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/adrián-garcía-gonzález-43909419b" target="_blank" title="Mi perfil de Linkedin">
                         <i class="fab fa-linkedin-in icon"></i>
+                        <p class="titulo_contacto">LINKEDIN</p>
+                        <p class="nick_contacto">Adrián García González</p>
                     </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/adrikbd99" target="_blank" title="Mi perfil de Twitter">
                         <i class="fab fa-twitter icon"></i>
+                        <p class="titulo_contacto">TWITTER</p>
+                        <p class="nick_contacto">@adrikbd99</p>
                     </a>
                 </li>
                 <li>
                     <a href="mailto:adrikbd99@gmail.com" target="_blank" title="Mi email">
                         <i class="fas fa-envelope icon"></i>
+                        <p class="titulo_contacto">EMAIL</p>
+                        <p class="nick_contacto">adrikbd99@gmail.com</p>
                     </a>
                 </li>
-              </ul>
-              <!-- <form method="post" action="#" class="formulario" id="formulario_contacto">
-                <div class="input_email" id="input1">
-                    <label for="email" class="label_formulario">Tu email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="input_asunto" id="input2">
-                    <label for="asunto" class="label_formulario">Asunto</label>
-                    <input type="text" id="asunto" name="asunto">
-                </div>
-                <div class="input_mensaje" id="input3">
-                    <label for="mensaje" class="label_formulario">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
-                </div>
-                <input type="submit" value="ENVIAR" class="boton_formulario">
-            </form> -->
+            </ul>
         </section>
         <footer class="pie">
             <p>Desarrollado por Adrián García González © <span id="fecha"></span></p>

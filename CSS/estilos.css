@@ -34,6 +34,10 @@
     top: 0px;
 }
 
+.cabecera a {
+    text-decoration: none;
+}
+
 .cabecera h1 {
     color: var(--main-text-color);
     font-weight: 500;
@@ -246,21 +250,11 @@
     width: 80%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* background-color: var(--main-bg-color); */
-    padding-top: 50px;
+    align-items: flex-start;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
 }
-
-/* .imagen .patron_imagen {
-    width: 150%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
 
 .imagen img {
     width: 100%;
@@ -628,6 +622,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
     margin: 0 auto;
   }
@@ -639,13 +634,12 @@
   
   .contacto ul li a {
     width: 100%;
-    height: 150px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    /* border: 3px solid var(--main-text-color); */
     border-radius: 5px;
     z-index: 1;
     text-decoration: none;
@@ -657,6 +651,41 @@
     transition: .5s;
     z-index: 3;
     font-size: 3rem;
+  }
+
+  .contacto ul li a .titulo_contacto {
+    position: relative;
+    color: var(--main-bg-color);
+    transition: .5s;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 0;
+    padding-top: 10px;
+  }
+
+  .contacto ul li a .nick_contacto {
+    position: relative;
+    color: var(--main-bg-color);
+    transition: .5s;
+    z-index: 3;
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    padding-bottom: 20px;
   }
   
   .contacto ul li a:hover .icon {
@@ -679,6 +708,16 @@
   .contacto ul li a:hover:before {
     top: 0;
   }
+
+  .contacto ul li a:hover .titulo_contacto {
+    top: 0;
+    opacity: 1;
+  }
+
+  .contacto ul li a:hover .nick_contacto {
+    bottom: 0;
+    opacity: 1;
+  }
   
   .contacto ul li:nth-child(1) a:before{
     background: #171515;
@@ -695,121 +734,6 @@
   .contacto ul li:nth-child(4) a:before {
     background: #de5246;
   }
-
-
-/* .formulario {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin: 0 auto;
-    z-index: 1s;
-}
-
-.input_email {
-    width: 100%;
-    border-bottom: 2px solid rgba(248, 241, 255, .7);
-    position: relative;
-}
-
-.input_email input {
-    width: 100%;
-    font-size: 1.2rem;
-}
-
-.input_asunto {
-    width: 100%;
-    border-bottom: 2px solid rgba(248, 241, 255, .7);
-    position: relative;
-}
-
-.input_asunto input {
-    width: 100%;
-    font-size: 1.2rem;
-}
-
-.input_mensaje {
-    width: 100%;
-    border-bottom: 2px solid rgba(248, 241, 255, .7);
-    position: relative;
-}
-
-.input_mensaje textarea {
-    width: 100%;
-    font-size: 1.2rem;
-    resize: none;
-}
-
-.formulario input[type='email'], input[type='text'], textarea {
-    height: auto;
-    background-color: transparent;
-    border: none;
-    color: var(--main-text-color);
-    padding: 5px;
-    font-weight: 200;
-    font-size: 1.1rem;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-text-fill-color: var(--main-text-color) !important;
-    transition: background-color 5000s ease-in-out 0s;
-}
-
-.formulario input, textarea:focus {
-    outline: none;
-}
-
-.formulario .label_formulario {
-    color: rgba(248, 241, 255, .7);
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    font-size: 1.1rem;
-    transition: all .2s ease-in-out;
-    cursor: text;
-    font-weight: 200;
-}
-
-#email-error, #asunto-error, #mensaje-error {
-    color: rgba(186, 92, 18, .9);
-    position: absolute;
-    bottom: -25px;
-    left: 5px;
-    font-size: .8rem;
-    transition: all .2s ease-in-out;
-    cursor: text;
-}
-
-.icono_mensaje_formulario {
-    margin-right: 5px;
-}
-
-.boton_formulario {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    transition: background-color .2s ease-in-out;
-    font: inherit;
-    line-height: normal;
-    overflow: visible;
-    -webkit-appearance: button;
-    -moz: none;
-    -ms: none;
-    border: 2px solid var(--main-details-color);
-    padding: 5px 15px;
-    border-radius: 5px;
-    color: var(--main-text-color);
-}
-
-.boton_formulario:hover {
-    transition: background-color .2s ease-in-out;
-    background-color: var(--main-details-color);
-} */
 /* FIN SECCIÓN CONTACTO */
 
 /* FOOTER */
@@ -910,6 +834,7 @@ input:-webkit-autofill:active{
     bottom: 50px;
     right: 50px;
     cursor: pointer;
+    z-index: 5;
 }
 
 .flecha_subir i {
@@ -918,6 +843,5 @@ input:-webkit-autofill:active{
     background-image: linear-gradient(to right bottom, #ba5c12, #c7671c, #d57225, #e27d2d, #f08836);
     border-radius: 5px;
     padding: 10px;
-    z-index: 4;
 }
 /* FIN FLECHA SUBIR HACIA SOBRE MI */
