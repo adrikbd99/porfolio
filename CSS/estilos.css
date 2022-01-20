@@ -795,7 +795,6 @@
     position: fixed;
     bottom: 50px;
     left: 50px;
-    cursor: pointer;
     overflow: hidden;
 }
 
@@ -829,10 +828,10 @@
     transition: color .1s ease-in-out;
 }
 
-.menu_rrss i:hover {
+/* .menu_rrss i:hover {
     transition: color .1s ease-in-out;
     color: var(--main-details-color);
-}
+} */
 /* FIN ICONO RRSS */
 
 /* FLECHA SUBIR HACIA SOBRE MI */
