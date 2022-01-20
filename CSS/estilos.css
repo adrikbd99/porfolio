@@ -123,9 +123,17 @@
 }
 
 .fijar {
-    background-color: rgba(248, 241, 255, .1);
-    backdrop-filter: blur(20px);
+    background-color: rgba(3, 25, 39, 1);
     box-shadow: rgba(3, 25, 39, 1) 0 0 10px;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .fijar {
+        background-color: rgba(248, 241, 255, .1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: rgba(3, 25, 39, 1) 0 0 10px;
+    }
 }
 
 .cabecera > i {
@@ -818,12 +826,12 @@
     font-size: 2rem;
     color: var(--main-text-color);
     cursor: pointer;
-    transition: transform .2s ease-in-out;
+    transition: color .1s ease-in-out;
 }
 
 .menu_rrss i:hover {
-    transition: transform .2s ease-in-out;
-    transform: rotate(5deg);
+    transition: color .1s ease-in-out;
+    color: var(--main-details-color);
 }
 /* FIN ICONO RRSS */
 
